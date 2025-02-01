@@ -12,7 +12,10 @@ int 	main(int argc, char **argv)
 	philo = malloc(sizeof(t_philosopher) * atoi(argv[1]));
 	if (!philo)
 		return (1);
-	init_sim(&sim, argv[1], argv[2], argv[3], argv[4], (argc == 6 ? argv[5] : NULL));
+	if(argc == 6)
+		init_sim(&sim, argv[1], argv[2], argv[3], argv[4], argv[5]);
+	else
+		init_sim(&sim, argv[1], argv[2], argv[3], argv[4], NULL);
 	initialize_philo(philo, &sim);
 	i = 0;
 	while (i < sim.number_of_philosophers)
