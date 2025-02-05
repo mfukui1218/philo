@@ -7,9 +7,9 @@ void	*philo_routine(void *arg)
 	philo = (t_philosopher *)arg;
 	if (!philo || !philo->sim)
 	{
-        printf("Error: Philosopher or sim is NULL\n");
-        return (NULL);
-    }
+		printf("Error: Philosopher or sim is NULL\n");
+		return (NULL);
+	}
 	while (!philo->sim->philosopher_died)
 	{
 		if (philo->sim->meal_limit > 0 && \

@@ -24,10 +24,10 @@ void	pthread_join_all(t_simulation *sim)
 
 long	get_current_timestamp()
 {
-    struct	timeval	tv;
+	struct	timeval	tv;
 
-    gettimeofday(&tv, NULL);
-    return ((tv.tv_sec * 1000) + (tv.tv_usec / 1000));
+	gettimeofday(&tv, NULL);
+	return ((tv.tv_sec * 1000) + (tv.tv_usec / 1000));
 }
 
 int	safe_atoi(char *str)
