@@ -3,13 +3,16 @@ NAME = philo
 
 # コンパイラとフラグ
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -pthread
+CFLAGS = -Wall -Wextra -Werror -pthread -fsanitize=address
 
 # ソースファイル
 SRCS = main.c \
-       philo.c \
+       init.c \
+       monitor.c \
        actions.c \
-       utils.c
+       actions_2.c \
+       utils.c \
+       error.c
 
 # オブジェクトファイル
 OBJS = $(SRCS:.c=.o)
