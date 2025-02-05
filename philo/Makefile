@@ -3,7 +3,7 @@ NAME = philo
 
 # コンパイラとフラグ
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -pthread -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -pthread
 
 # ソースファイル
 SRCS = main.c \
