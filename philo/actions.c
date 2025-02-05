@@ -50,7 +50,7 @@ void	philo_take_forks(t_philosopher *philo)
 	long	time;
 
 	time = get_current_timestamp();
-	if (philo->id % 2 != 0)
+	if (philo->id % 2 == 1)
 	{
 		pthread_mutex_lock(philo->right_fork);
 		pthread_mutex_lock(philo->left_fork);
