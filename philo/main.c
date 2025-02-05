@@ -10,7 +10,7 @@ int 	main(int argc, char **argv)
 		return (error_sel(0), 1);
 	philo = malloc(sizeof(t_philosopher) * atoi(argv[1]));
 	if (!philo)
-		return (error_sel(1), 1);
+		return (error_sel(ALLOCTAE_ERROR), 1);
 	if (!init_all(&sim, philo, argc, argv))
 		return (1);
 	pthread_create_all(philo, &sim);

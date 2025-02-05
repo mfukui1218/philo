@@ -7,6 +7,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+#define ALLOCTAE_ERROR 1
+
 typedef struct s_philosopher {
 	int					id;
 	pthread_mutex_t		*left_fork;

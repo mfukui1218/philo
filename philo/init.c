@@ -6,14 +6,14 @@ int	init_all(t_simulation *sim, t_philosopher *philo, int paramc, char **param)
 	if (!sim->forks)
 	{
 		free(philo);
-		return (error_sel(1), 0);
+		return (error_sel(ALLOCTAE_ERROR), 0);
 	}
 	sim->threads = malloc(sizeof(pthread_t) * safe_atoi(param[1]));
 	if (!sim->threads)
 	{
 		free(philo);
 		free(sim->forks);
-		return (error_sel(1), 0);
+		return (error_sel(ALLOCTAE_ERROR), 0);
 	}
 	init_sim(sim, paramc, param);
 	init_philo(philo, sim);
